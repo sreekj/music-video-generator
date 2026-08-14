@@ -1,0 +1,112 @@
+# ---------------------------------------------------------------------------
+# Secrets. Nothing here may ever reach a public remote.
+# ---------------------------------------------------------------------------
+.env
+.env.*
+*.key
+*.pem
+.openai.key
+secrets.json
+credentials.json
+
+# ---------------------------------------------------------------------------
+# Data: inputs, outputs, caches. The pipeline reads and writes everything
+# under data/, none of which belongs in version control -- source audio is
+# copyrighted, rendered video is hundreds of MB, and generated images are
+# reproducible from prompts.
+# ---------------------------------------------------------------------------
+data/
+!data/.gitkeep
+
+# Personal theme sets. Only the example ships; your own prompts stay local.
+themes/*.json
+!themes/example.json
+
+# ---------------------------------------------------------------------------
+# Media and binaries -- belt and braces, in case anything lands outside data/
+# ---------------------------------------------------------------------------
+*.mp4
+*.mkv
+*.mov
+*.webm
+*.avi
+*.mp3
+*.wav
+*.flac
+*.m4a
+*.ogg
+*.aac
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+*.tiff
+*.raw
+
+# Model weights and large blobs
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.onnx
+*.gguf
+*.npz
+*.npy
+*.tar
+*.zip
+*.7z
+*.gz
+
+# Generated artefacts
+timeline.json
+shotlist.json
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# Node (frontend is dependency-free today, but keep this honest)
+# ---------------------------------------------------------------------------
+node_modules/
+frontend/dist/
+npm-debug.log*
+yarn-error.log*
+
+# ---------------------------------------------------------------------------
+# Editors and OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------------------------------
+# Scratch
+# ---------------------------------------------------------------------------
+*.log
+*.part
+*.tmp
+tmp/
+scratch/

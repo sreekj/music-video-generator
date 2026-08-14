@@ -1,0 +1,12 @@
+# Stage A generation. Install torch from the CUDA index:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+torch
+torchvision
+diffusers
+transformers
+accelerate
+safetensors
+sentencepiece
+protobuf
+imageio
+imageio-ffmpeg

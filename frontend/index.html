@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VideoCreator</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header>
+  <h1>Video<span>Creator</span></h1>
+  <div id="health" class="health" title="render environment">checking…</div>
+</header>
+
+<!-- ---------- new project ---------- -->
+<section id="setup" class="card">
+  <h2>New project</h2>
+  <div class="row">
+    <label class="file">
+      <span class="lbl">Audio</span>
+      <input type="file" id="f-audio" accept="audio/*">
+      <span class="name" id="n-audio">no file</span>
+    </label>
+    <label class="file">
+      <span class="lbl">Theme image</span>
+      <input type="file" id="f-theme" accept="image/*">
+      <span class="name" id="n-theme">no file</span>
+    </label>
+  </div>
+  <label class="prompt">
+    <span class="lbl">Animation prompt</span>
+    <input type="text" id="f-prompt" placeholder="stormy sea at dusk, drifting clouds…">
+  </label>
+  <div class="row">
+    <button id="create" class="primary">Analyse &amp; build shotlist</button>
+    <select id="existing"><option value="">— open existing —</option></select>
+  </div>
+  <p class="hint" id="setup-status"></p>
+</section>
+
+<!-- ---------- editor ---------- -->
+<main id="editor" hidden>
+
+  <div class="split">
+    <!-- preview -->
+    <section class="card preview">
+      <h2>Preview</h2>
+      <div class="video-wrap">
+        <video id="video" controls playsinline></video>
+        <img id="poster" alt="theme">
+      </div>
+      <div class="row">
+        <button id="prev-shot" class="primary">Preview shot</button>
+        <button id="prev-all">Preview all</button>
+        <button id="render-full">Render 1080p</button>
+      </div>
+      <div class="progress" id="prog-wrap" hidden>
+        <div class="bar"><div id="prog-bar"></div></div>
+        <span id="prog-txt"></span>
+      </div>
+      <p class="hint" id="render-status"></p>
+    </section>
+
+    <!-- inspector -->
+    <section class="card inspector">
+      <h2>Shot <span id="shot-n" class="pill">—</span></h2>
+      <div id="insp-body" class="muted">Select a shot on the timeline.</div>
+    </section>
+  </div>
+
+  <!-- timeline -->
+  <section class="card">
+    <h2>Timeline <span id="tl-meta" class="pill"></span></h2>
+    <div id="timeline" class="timeline">
+      <canvas id="wave"></canvas>
+      <div id="shots" class="shots"></div>
+      <div id="playhead" class="playhead"></div>
+    </div>
+    <div class="legend">
+      <span><i class="sw look0"></i>chorus</span>
+      <span><i class="sw look1"></i>verse</span>
+      <span><i class="sw look2"></i>soft</span>
+      <span class="grow"></span>
+      <span id="tl-hint" class="hint">click a shot to edit · click the waveform to seek</span>
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

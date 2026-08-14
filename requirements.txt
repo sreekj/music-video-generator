@@ -1,0 +1,12 @@
+# Core pipeline (CPU) -- analysis, assembly, API.
+librosa>=1.0
+soundfile
+numpy
+scipy
+scikit-learn
+pillow
+moderngl
+fastapi
+uvicorn[standard]
+pydantic>=2
+python-multipart

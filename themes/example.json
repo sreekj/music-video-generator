@@ -1,0 +1,50 @@
+{
+  "name": "storm-coast",
+  "description": "Example theme set. Nine images in three energy tiers: tier 0 plays under the loudest sections of a song, tier 2 under the quietest. Copy this file, rewrite the prompts, and pass it with --themes.",
+  "style": "photorealistic cinematic still, extremely detailed, dramatic volumetric lighting, deep atmospheric perspective, 8k, no text, no watermark, no signature, no lettering, no borders",
+  "cover": "coast_dawn",
+  "tiers": {
+    "0": [
+      {
+        "id": "storm_break",
+        "prompt": "A violent storm breaking over a black basalt sea cliff, enormous wave exploding into spray, forked lightning splitting the sky, spray lit from within"
+      },
+      {
+        "id": "lightning_sky",
+        "prompt": "A vast night sky torn by branching lightning above a churning ocean, clouds lit from inside, immense scale and depth"
+      },
+      {
+        "id": "aurora_peak",
+        "prompt": "A blazing aurora writhing above jagged snow peaks, curtains of green and violet light, stars behind, monumental scale"
+      }
+    ],
+    "1": [
+      {
+        "id": "cliff_mist",
+        "prompt": "Towering sea cliffs half-drowned in drifting mist, shafts of sunlight breaking through, distant surf far below"
+      },
+      {
+        "id": "valley_storm",
+        "prompt": "A wide glacial valley beneath gathering thunderheads, rain sweeping across in visible sheets, low sun catching the far ridge"
+      },
+      {
+        "id": "forest_light",
+        "prompt": "An ancient forest under heavy cloud, long shafts of light through the canopy, mist between the trunks, deep receding perspective"
+      }
+    ],
+    "2": [
+      {
+        "id": "coast_dawn",
+        "prompt": "A calm coastline at first light, still water, soft layered clouds edged in gold and rose, distant headland silhouette, tranquil"
+      },
+      {
+        "id": "still_lake",
+        "prompt": "A perfectly still mountain lake at dawn, mirror reflection of the peaks, thin mist on the surface, cool blue and pale gold"
+      },
+      {
+        "id": "dusk_field",
+        "prompt": "An open field at dusk under a vast quiet sky, last light on the horizon, faint distant lightning, serene and spacious"
+      }
+    ]
+  }
+}
